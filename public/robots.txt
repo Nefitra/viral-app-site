@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://viral-app.org/sitemap.xml
+
+Host: https://viral-app.org
