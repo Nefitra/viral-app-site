@@ -61,22 +61,22 @@ const PHASES: Phase[] = [
   {
     phase: "Phase 5",
     title: "$VIRAL Token Expansion",
-    status: "Done",
+    status: "In Progress",
     items: [
       { text: "BLUM launch", done: true },
-      { text: "Bonding / migration", done: true },
-      { text: "Real $VIRAL claim/drop", done: true },
-      { text: "DEX & wallet visibility", done: true },
+      { text: "Bonding / migration", done: false },
+      { text: "Real $VIRAL claim/drop", done: false },
+      { text: "DEX & wallet visibility", done: false },
     ],
   },
   {
     phase: "Phase 6",
     title: "Blockchain & CEX",
-    status: "Done",
+    status: "Upcoming",
     items: [
-      { text: "Development escrow smart contract", done: true },
-      { text: "Full migration on Blockchain", done: true },
-      { text: "Cooperation with CEX", done: true },
+      { text: "Development escrow smart contract", done: false },
+      { text: "Full migration on Blockchain", done: false },
+      { text: "Cooperation with CEX", done: false },
     ],
   },
 ];
