@@ -32,10 +32,10 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <nav
-          className={`flex items-center justify-between rounded-2xl px-4 sm:px-6 py-3 transition-all duration-300 ${
+          className={`flex items-center justify-between rounded-2xl px-4 sm:px-6 py-3 transition-all duration-300 border shadow-[0_10px_45px_rgba(0,0,0,0.45)] ${
             scrolled
-              ? "glass-strong shadow-[0_8px_40px_rgba(138,43,255,0.25)]"
-              : "bg-transparent"
+              ? "bg-[#12051F]/95 border-[#B066FF]/35 backdrop-blur-2xl"
+              : "bg-[#12051F]/88 border-[#B066FF]/25 backdrop-blur-xl"
           }`}
         >
           {/* Logo */}
@@ -52,7 +52,7 @@ export default function Navbar() {
               <span className="display-font text-base sm:text-lg font-bold text-white">
                 <span className="text-gradient-gold">$VIRAL</span>
               </span>
-              <span className="text-[10px] uppercase tracking-[0.18em] text-[#A9A3B8]">App</span>
+              <span className="text-[10px] uppercase tracking-[0.18em] text-white/75">App</span>
             </div>
           </a>
 
@@ -62,7 +62,7 @@ export default function Navbar() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="px-3 py-2 text-sm text-[#A9A3B8] hover:text-white transition rounded-lg hover:bg-white/5"
+                  className="px-3 py-2 text-sm font-semibold text-white/85 hover:text-white transition rounded-lg hover:bg-white/10"
                 >
                   {item.label}
                 </a>
@@ -83,7 +83,7 @@ export default function Navbar() {
             </a>
             <button
               onClick={() => setOpen(!open)}
-              className="lg:hidden w-10 h-10 rounded-lg glass flex items-center justify-center"
+              className="lg:hidden w-11 h-11 rounded-xl bg-[#1B0830]/95 border border-[#B066FF]/35 shadow-[0_0_24px_rgba(138,43,255,0.25)] flex items-center justify-center"
               aria-label="Menu"
             >
               <div className="flex flex-col gap-1.5">
@@ -97,14 +97,14 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {open && (
-          <div className="lg:hidden mt-2 glass-strong rounded-2xl p-3">
-            <ul className="flex flex-col gap-1">
+          <div className="lg:hidden mt-3 rounded-3xl p-4 bg-[#10041D]/98 border border-[#B066FF]/40 backdrop-blur-2xl shadow-[0_18px_70px_rgba(0,0,0,0.72),0_0_45px_rgba(138,43,255,0.28)]">
+            <ul className="flex flex-col gap-2">
               {NAV_ITEMS.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="block px-4 py-3 text-sm text-[#A9A3B8] hover:text-white hover:bg-white/5 rounded-lg transition"
+                    className="block px-4 py-3 text-base font-bold tracking-[-0.01em] text-white bg-white/[0.06] hover:bg-[#8A2BFF]/24 rounded-2xl border border-white/[0.07] transition shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
                   >
                     {item.label}
                   </a>
@@ -115,7 +115,7 @@ export default function Navbar() {
                   href="https://t.me/Viral_App_Bot"
                   target="_blank"
                   rel="noreferrer"
-                  className="block btn-primary text-white text-sm font-semibold text-center px-5 py-3 rounded-xl mt-2"
+                  className="block btn-primary text-white text-base font-extrabold text-center px-5 py-4 rounded-2xl mt-2 shadow-[0_10px_35px_rgba(138,43,255,0.45)]"
                 >
                   Launch App
                 </a>
